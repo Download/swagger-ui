@@ -28,15 +28,15 @@ export default class StandaloneLayout extends React.Component {
 
     return (
 
-      <Container className='swagger-ui'>
+      <Container className='swagger-ui' style={{marginTop:"64px"}}>
         { Topbar ? <Topbar /> : null }
         { loadingStatus === "loading" &&
-          <div className="info">
+          <div className="info" style={{marginLeft:"20px"}}>
             <h4 className="title">Loading...</h4>
           </div>
         }
         { loadingStatus === "failed" &&
-          <div className="info">
+          <div className="info" style={{marginLeft:"20px"}}>
             <h4 className="title">Failed to load spec.</h4>
           </div>
         }

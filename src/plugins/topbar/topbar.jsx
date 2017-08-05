@@ -126,17 +126,13 @@ export default class Topbar extends React.Component {
     }
 
     return (
-      <div className="topbar">
+      <div className="navbar" style={{width:"100%", zIndex:1, backgroundColor:"white", position:"fixed", top:0, boxShadow:"0px -4px 2px 2px rgba(255,255,255,1), 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12)"}}>
         <div className="wrapper">
-          <div className="topbar-wrapper">
-            <Link href="#" title="Swagger UX">
-              <img height="30" width="30" src={ Logo } alt="Swagger UI"/>
-              <span>swagger</span>
-            </Link>
-            <form className="download-url-wrapper" onSubmit={formOnSubmit}>
-              {control}
-            </form>
-          </div>
+          <style dangerouslySetInnerHTML={{__html: `@font-face {font-family:'Source Sans Pro'; font-style:normal; font-weight:700; src:url(https://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGEo0As1BFRXtCDhS66znb_k.woff2) format('woff2');}`}} />
+          <b className="ridalapp" style={{display: "inline-block", height:"52px", width:"100%", padding:"9px 8px 0 48px", fontFamily:"Source Sans Pro", fontSize:"26px"}}>
+            <img width="40" height="40" style={{float:"left", marginLeft:"-48px", marginTop:"-3px"}} src="https://cdn.rawgit.com/download/bridalapp-static/1.1.6/bridalapp/icon-bridalapp.png"/>
+            Bridal<a style={{color:"#ec80ae"}}>App</a> <b>API Docs</b>
+          </b>
         </div>
       </div>
     )
